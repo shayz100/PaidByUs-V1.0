@@ -315,6 +315,10 @@
       <Project>{ac435b2a-6575-4c47-bb73-6cf744a34c86}</Project>
       <Name>AmsalemLogic.NewLogic</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AmsalemLogic.VBClasses\AmsalemLogic.VBClasses.vbproj">
+      <Project>{f27c181f-b58b-453d-99cd-103e48d75fd1}</Project>
+      <Name>AmsalemLogic.VBClasses</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

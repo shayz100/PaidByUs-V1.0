@@ -13,7 +13,6 @@ namespace Amsalem.Types.CreditCards
 {
     public class AXRertrieveCreditCards : RetrieveCreditCardBase, IRetrieveCardCard
     {
-
         public List<CreditCard> RetrievePaidByUsCreditCardsByManagerClockId(int AgentClockId, bool filterd, string dataAreaID, EBackOfficeType backOffice, bool withVAN = false)
         {
             string source = "AmsLogic_DBConnectionString";
@@ -137,6 +136,27 @@ namespace Amsalem.Types.CreditCards
         {
             var cc = new List<CreditCard>();
             return cc;
+        }
+
+        public List<CreditCard> GetAllPaidByUsCreditCards()
+        { 
+            string AxDBStatement ="select EXPIRYDATE, CREDITCARDNO, CVV, RECID, COMPANYID, AMS_BANKNUMBER ,EMPLID, DATAAREAID, AMS_EmpGovernmentId";
+            AxDBStatement += "  from [ELI_AMSALEMCREDITCARD]                                                                         ";
+            AxDBStatement += "  where DATAAREAID = @AxCompany                                                                        ";
+
+            List<SqlParameter> AxDBSqlParameters = new List<SqlParameter>();
+        
+            var AxDBresults = DataBaseAccess.PerformQueryToCompany (true,AxDBStatement, AxDBSqlParameters, "%");
+            var toReturn = new List<CreditCard>();
+            if (AxDBresults != null)
+            {
+                foreach (DataRow row in AxDBresults.Rows)
+                {
+                    var toAdd = ParseSinglePaidByUsCard(row);
+                    toReturn.Add(toAdd);
+                };
+            }
+            return toReturn;
         }
     }
 }

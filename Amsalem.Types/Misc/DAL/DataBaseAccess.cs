@@ -121,36 +121,36 @@ namespace Amsalem.Types.Misc.DAL
             var connection = "";
             switch (axCompany)
             {
-                case "AST":
-                    connection = "AX_Turkey";
-                    break;
-                case "IND":
-                    connection = "AX_India";
-                    break;
                 case "AMSA":
                     connection = "AX_Israel";
                     break;
                 case "USA":
                     connection = "AX_USA";
                     break;
-                case "MEX":
-                    connection = "AX_MEX";
-                    break;
-                case "UK":
-                    connection = "AX_UK";
-                    break;
-                case "HKG":
-                    connection = "AX_HongKong";
-                    break;
-                case "DPC":
-                    connection = "DB_10_DpcNew";
-                    break;
-                case "AmsLogic_DB":
-                    connection = "AmsLogic_DBConnectionString";
-                    break;
-                case "AmsLogic_DTT":
-                    connection = "AmsLogic_DTT";
-                    break;
+                //case "AST":
+                //    connection = "AX_Turkey";
+                //    break;
+                //case "IND":
+                //    connection = "AX_India";
+                //    break;
+                //case "MEX":
+                //    connection = "AX_MEX";
+                //    break;
+                //case "UK":
+                //    connection = "AX_UK";
+                //    break;
+                //case "HKG":
+                //    connection = "AX_HongKong";
+                //    break;
+                //case "DPC":
+                //    connection = "DB_10_DpcNew";
+                //    break;
+                //case "AmsLogic_DB":
+                //    connection = "AmsLogic_DBConnectionString";
+                //    break;
+                //case "AmsLogic_DTT":
+                //    connection = "AmsLogic_DTT";
+                //    break;
                 default:
                     connection = "AX_Israel";
                     break;
@@ -201,12 +201,12 @@ namespace Amsalem.Types.Misc.DAL
         {
             var CompanyList = new List<string>();
             CompanyList.Add("AMSA");
-            CompanyList.Add("HKG");
-            CompanyList.Add("UK");
             CompanyList.Add("USA");
-            CompanyList.Add("MEX");
-            CompanyList.Add("AST");
-            CompanyList.Add("IND");
+            //CompanyList.Add("HKG");
+            //CompanyList.Add("UK");
+            //CompanyList.Add("MEX");
+            //CompanyList.Add("AST");
+            //CompanyList.Add("IND");
             return CompanyList;
         }
 

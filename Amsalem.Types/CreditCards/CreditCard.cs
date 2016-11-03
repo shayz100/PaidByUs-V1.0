@@ -57,8 +57,5 @@ namespace Amsalem.Types.CreditCards
             CreditCardExpirationDate = DateTime.Now;
             CreditCardOwner = PaymentMethodCreditCardOwner.OurCC;
         }
-
-       
-
     }
 }

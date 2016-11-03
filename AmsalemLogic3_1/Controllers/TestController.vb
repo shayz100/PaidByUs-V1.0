@@ -1,6 +1,7 @@
 ﻿Imports System.Web.Mvc
 Imports AmsalemLogic.NewLogic
 Imports AmsalemLogic.VBClasses
+Imports AmsalemLogic.VBClasses.Administration
 
 Namespace Controllers
     Public Class TestController
@@ -11,9 +12,9 @@ Namespace Controllers
             Return View(TestClass)
         End Function
 
-        sub PermissionExample() 
+        Sub PermissionExample()
             Dim user = ClassUsers.GetCurrentUser()
-            Dim userPermission = New Administration.UserPermissionHandler()
+            Dim userPermission = New UserPermissionHandler()
             Dim permission = userPermission.IsActionAllowed(user.PermissionGroup, "Watch Financials", "")
             If (Not permission) Then
                 Throw New ApplicationException(userPermission.UNAUTHORIZED_MESSAGE)

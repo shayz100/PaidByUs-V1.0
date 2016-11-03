@@ -210,6 +210,8 @@ Public Class ClassUsers
 
     Public Shared Function GetCurrentUser(Optional LOGON_USER As String = Nothing) As ClassUsers
         Dim result = New ClassUsers()
+        result.AgentName = "Nitzan"
+        result.AgentEmail = ""
         Return result
     End Function
 

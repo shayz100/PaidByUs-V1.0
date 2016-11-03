@@ -48,7 +48,6 @@
     <Compile Include="CreditCards\CreditCardCompany.cs" />
     <Compile Include="CreditCards\IRertrieveCardCard.cs" />
     <Compile Include="CreditCards\PaymentMethodCreditCardOwner.cs" />
-    <Compile Include="CreditCards\ValidateCreditCardNumber.cs" />
     <Compile Include="Enums\Enumerations.cs" />
     <Compile Include="Misc\Cache\CacheAccessor.cs" />
     <Compile Include="Misc\DAL\DataBaseAccess.cs" />

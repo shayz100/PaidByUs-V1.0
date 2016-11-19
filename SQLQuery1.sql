@@ -1,1 +1,0 @@
-﻿EXEC sp_rename 'AXEliAmsalemCreditCard', 'ELI_AMSALEMCREDITCARD'
